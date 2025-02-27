@@ -1,0 +1,46 @@
+
+h1 {
+    font-size: 8em;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1rem;
+    color: #E0E3E8;
+    text-transform: uppercase;
+}
+
+.list-group-item {
+    position: relative;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 1rem 0;
+    text-decoration: none;
+
+    & > span {
+        transition: .5s;
+    }
+  
+    .arrow {
+      opacity: 0;
+      transform: translateX(-15px);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+  
+    &:hover {  
+        color: inherit;
+
+        & > span {
+            font-weight: 500;
+        }
+
+        .arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+

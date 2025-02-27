@@ -1,0 +1,48 @@
+/* Make the modal fullscreen but not initially visible */
+.modal.fade {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+  
+.project-modal .modal-content {
+    position: absolute;
+    bottom: 0;
+    height: 95vh; /* Starts at 1/4 of the screen */
+    max-height: 100vh;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    transition: height 0.3s ease-in-out;
+}
+
+.project-modal .modal-body {
+    overflow: auto;
+    padding: 20px;
+}
+
+.modal-scroll-content {
+    min-height: 200vh; /* Simulates long content */
+}
+
+/* Smooth transition when scrolling */
+.expanded {
+    height: 100vh !important;
+}
+  

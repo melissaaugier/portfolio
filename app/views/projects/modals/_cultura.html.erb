@@ -1,0 +1,15 @@
+<div class="modal fade project-modal" id="projectModal<%= index %>" tabindex="-1" aria-labelledby="projectModalLabel<%= index %>" aria-hidden="true" data-controller="modal" data-modal-target="modal" data-index="<%= index %>">
+    <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+        <div class="modal-body custom-modal-body" data-modal-scroll-target="modalBody">
+        <button type="button" class="btn-close close-modal" data-action="click->modal#closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h2><%= project %></h2>
+        <p>Details about <%= project %>...</p>
+        <div class="modal-scroll-content">
+            <p>Scroll down for more content...</p>
+            <!-- More content here -->
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
