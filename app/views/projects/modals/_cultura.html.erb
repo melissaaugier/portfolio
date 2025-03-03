@@ -1,15 +1,49 @@
-<div class="modal fade project-modal" id="projectModal<%= index %>" tabindex="-1" aria-labelledby="projectModalLabel<%= index %>" aria-hidden="true" data-index="<%= index %>">
-    <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-        <div class="modal-body custom-modal-body" data-modal-scroll-target="modalBody">
-        <button type="button" class="btn-close close-modal" data-action="click->modal#closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
-        <h2><%= project %></h2>
-        <p>Details about <%= project %>...</p>
-        <div class="modal-scroll-content">
-            <p>Scroll down for more content...</p>
-            <!-- More content here -->
+
+<div class='d-flex justify-content-end mb-3'>
+    <%= link_to "https://occasion.cultura.com/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+        <span class="c-btn__label">learn more on occasion.cultura.com →</span>
+    <% end %>
+</div>
+<div class="row">
+    <%= image_tag 'cultura-main-photo.png', alt: "cultura main appearance", width: '100%' %>
+</div>
+<div class="row my-2 g-5">
+    <div class="col-6">
+        <%= image_tag 'cultura-1.png', alt: "cultura mobile view", width: '100%' %>
+        <div class="my-5 px-2">
+            <h3>Challenges & Solutions</h3>
+            <div>
+                <p><strong>Starting as an Entrepreneur</strong> - Took on the challenge of leading a project from the ground up, learning to balance both technical and business aspects while focusing on delivering a quality product.</p>
+                <p><strong>Building a Tablet-Only App</strong> - Designed and developed an app optimized for tablet use, ensuring a smooth and responsive user experience on larger screens.</p>
+                <p><strong>Using Bootstrap</strong> - Utilized Bootstrap to quickly create a responsive layout, ensuring the app was mobile-friendly and visually consistent across devices.</p>
+            </div>
         </div>
+        <div class="my-5 px-2">
+            <h3>Responsibilities</h3>
+            <p>
+                <strong>Full-Stack Development</strong> - Collaborated with the team on both front-end and back-end development for a web app built with Ruby on Rails.
+            </p>
+            <p>
+                <strong>UX & Graphic Design</strong> - Designed the user experience and created the graphic design solo, ensuring full alignment with the brand’s graphic charter.
+            </p>
         </div>
     </div>
+    <div class="col-6">
+        <div class='mb-5'>
+            <h3>Overview</h3>
+            <p>
+                Occasion by Cultura is a platform dedicated to offering second-hand items. The project focused on designing and developing a user-friendly webapp that facilitates the buying and selling of pre-owned products, while promoting sustainability and creating a seamless user experience.
+            </p>
+        </div>
+        <%= image_tag 'cultura-2.png', alt: "cultura shop tablet view", width: '100%' %>
+        <div class="p-3 d-flex align-items-center justify-content-between my-5">
+            <div class="vertical-line"></div>
+            <div class="pt-3">
+                <p>Visit the Cultura website to learn more about this project:</p>
+                <%= link_to "https://occasion.cultura.com/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+                    <span class="c-btn__label">learn more on occasion.cultura.com →</span>
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>

@@ -1,0 +1,36 @@
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 16px 0;
+    background-color: #a47764;
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0;
+}
+  
+.banner-track {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: banner-track 10s linear infinite;
+
+    span {
+        margin: 0 12px;
+    }
+}
+
+.banner-track p {
+    display: inline-block;
+    margin: 0;
+}
+
+@keyframes banner-track {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}

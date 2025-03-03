@@ -1,29 +1,37 @@
 <div class="container-fluid">
   <div class="row min-vh-80">
     <!-- Left Column -->
-    <div class="col-12 col-md-7 p-5">
-      <div class="d-flex flex-column justify-content-around flex-wrap gap-5">
+    <div class="col-12 col-md-7 p-5 d-flex flex-column justify-content-center">
+      <div class="d-flex flex-column justify-content-around gap-3">
         <h1>I'm Melissa Augier.</h1>
-        <h2>Crafting seamless web experiences, one Rails app at a time! 🚀💎</h2>
+        <h2>Crafting seamless web experiences, one Rails app at a time!</h2>
       </div>
     </div>
 
     <!-- Right Column -->
     <div class="col-12 col-md-5 px-5 d-flex align-items-center">
-      <div class="w-75 w-md-100">
-        <h3>Recent projects</h3>
-        <ul class="list-group list-group-flush list-projects py-4">
+      <div class="w-100">
+        <h3 class="mb-5">Recent projects</h3>
+        <ul class="list-group list-group-flush list-projects py-2">
           <% Project.all.each_with_index do |project, index| %>
-            <%= link_to "#", class: 'list-group-item d-flex justify-content-between align-items-center', data: { bs_toggle: "modal", bs_target: "#projectModal#{index}" } do %>
+            <%= link_to "#", class: 'list-group-item d-flex justify-content-between align-items-center', data: { bs_toggle: "offcanvas", bs_target: "#projectOffcanvas#{index}" } do %>
               <span><%= project.title %></span>
-              <span class="arrow">→</span>
+              <div class="d-flex gap-3">
+                <div>
+                  <% project.tools.pluck(:name).each do |tool| %>
+                    <span class='badge badge-pill badge-light'><%= tool %></span>
+                  <% end %>
+                </div>
+                <span class="arrow">→</span>
+              </div>
             <% end %>
 
-            <!-- Modal for Each Project -->
-            <%= render "projects/modals/#{project.pseudo}", index:, project: %>
+            <!-- Offcanvas for Each Project -->
+            <%= render 'projects/partials/offcanvas', project:, index: %>
           <% end %>
         </ul>
       </div>
     </div>
   </div>
 </div>
+<%= render 'projects/partials/banner' %>

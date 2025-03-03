@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag 'logo.png', type: 'image/x-icon' %>
 
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_include_tag "application" %>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light p-3 d-flex justify-content-between">
+  <body class="mb-5 pb-5">
+    <nav class="navbar navbar-light p-3 d-flex justify-content-between">
       <%= link_to root_path, class: 'navbar-brand d-flex align-items-center gap-2' do  %>
         <%= image_tag "logo.png", alt: "logo", width: 35, height: 35 %>
         <p class="m-0">magr</p>
       <% end %>
       <div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-nav d-flex flex-row gap-3">
+          <li class="nav-item">
+            <%= link_to "Projects", root_path, class: 'nav-link'  %>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="about-btn">About</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#contactOffcanvas" aria-controls="contactOffcanvas" id="contact-btn">
+              Contact
+            </button>
+          </li>
+        </ul>
       </div>
     </nav>
     <%= yield %>
+    <%= render 'pages/about' %>
+    <%= render 'pages/contact' %>
   </body>
 </html>

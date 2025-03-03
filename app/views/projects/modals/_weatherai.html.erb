@@ -1,15 +1,35 @@
-<div class="modal fade project-modal" id="projectModal<%= index %>" tabindex="-1" aria-labelledby="projectModalLabel<%= index %>" aria-hidden="true" data-index="<%= index %>">
-    <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-        <div class="modal-body custom-modal-body" data-modal-scroll-target="modalBody">
-        <button type="button" class="btn-close close-modal" data-action="click->modal#closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
-        <h2><%= project %></h2>
-        <p>Details about <%= project %>...</p>
-        <div class="modal-scroll-content">
-            <p>Scroll down for more content...</p>
-            <!-- More content here -->
-        </div>
-        </div>
+<div class="container">
+    <div class="row g-5 mb-5">
+        <%= image_tag 'weatherai-main-photo.png', alt: "Weather AI main appearance", width: '100%' %>
     </div>
+    <div class="row g-5">
+        <div class="col-6">
+            <%= image_tag 'weatherai-2.png', alt: 'weatherai tablet format', width: "100%" %>
+        </div>
+        <div class="col-6">
+            <div class='px-2'>
+                <h3>Overview</h3>
+                <p>
+                    Weather AI is a global weather app built with React, integrating the ChatGPT API and OpenWeather API. It provides real-time weather updates, sunrise and sunset times, and wind conditions.
+                </p>
+            </div>
+            <div class="my-5 px-2">
+            <h3>Challenges & Solutions</h3>
+                <div>
+                    <p><strong>Prompt Construction:</strong> - Crafting effective prompts was tricky. Solved by iterating, testing, and researching best practices.</p>
+                    <p><strong>Learning React</strong> - Managing state and API calls was challenging. Overcame it by investigating hooks (useState, useEffect) and component structure.</p>
+                </div>
+            </div>
+            <div class="my-5 px-2">
+                <h3>Responsabilities</h3>
+                <p>
+                    <strong>Learning & Experimentation</strong> - Explored a new front-end tool while refining development skills.
+                </p>
+                <p>
+                    <strong>Creative Design</strong> - Had fun crafting a clean, modern interface.
+                </p>
+            </div>
+            <%= image_tag 'weatherai-1.png', alt: 'weatherai tablet format', width: "100%" %>
+        </div>
     </div>
 </div>

@@ -1,14 +1,49 @@
-<div class="modal fade project-modal" id="projectModal<%= index %>" tabindex="-1" aria-labelledby="projectModalLabel<%= index %>" aria-hidden="true" data-index="<%= index %>">
-    <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-        <div class="modal-body custom-modal-body" data-modal-scroll-target="modalBody">
-        <%= render 'projects/partials/modal_header', project: %>
-        <p>Details about <%= project %>...</p>
-        <div class="modal-scroll-content">
-            <p>Scroll down for more content...</p>
-            <!-- More content here -->
+<div class='d-flex justify-content-end mb-3'>
+    <%= link_to "https://vertiflor.co.id/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+        <span class="c-btn__label">visit vertiflor.co.id →</span>
+    <% end %>
+</div>
+<div class="row">
+    <%= image_tag 'vertiflor-main-photo.png', alt: "Vertiflor main appearance", width: '100%' %>
+</div>
+<div class="row my-2 g-5">
+    <div class="col-6">
+        <%= image_tag 'vertiflor-2.png', alt: "Vertiflor mobile view", width: '100%' %>
+        <div class="my-5 px-2">
+            <h3>Challenges & Solutions</h3>
+            <div>
+                <p><strong>Client Requirement for WordPress</strong> - Worked within platform limitations while ensuring a custom, high-end look.</p>
+                <p><strong>Balancing Design & Performance</strong> - Maintained a visually rich experience without compromising speed.</p>
+            </div>
         </div>
+        <div class="my-5 px-2">
+            <h3>Responsabilities</h3>
+            <p>
+                <strong>UX Design</strong> - Developed a magazine editorial-style layout to enhance the brand’s premium aesthetic.
+            </p>
+            <p>
+                <strong>Development</strong> - Built the website using WordPress, while mentoring a junior developer throughout the process.
+            </p>
+        </div>
+        <div class='my-5'>
         </div>
     </div>
+    <div class="col-6">
+        <div class='mb-5'>
+            <h3>Overview</h3>
+            <p>
+                Vertiflor is a luxury vinyl flooring brand. The project involved designing and developing a website that effectively showcases the brand’s products, values, and services while ensuring a smooth user experience.
+            </p>
+        </div>
+        <%= image_tag 'vertiflor-3.png', alt: "Vertiflor shop tablet view", width: '100%' %>
+        <div class="p-3 d-flex align-items-center justify-content-between my-5">
+            <div class="vertical-line"></div>
+            <div class="pt-3">
+                <p>Visit the Vertiflor website to see the project live:</p>
+                <%= link_to "https://vertiflor.co.id/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+                    <span class="c-btn__label">visit vertiflor.co.id →</span>
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>

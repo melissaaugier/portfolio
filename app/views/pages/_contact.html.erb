@@ -1,0 +1,34 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="contactOffcanvas" aria-labelledby="contactOffcanvasLabel">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close text-reset btn-close-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h5 class="offcanvas-title mb-4 " id="contactOffcanvasLabel">Get in Touch</h5>
+
+    <p class="mb-4">Feel free to reach out to me via WhatsApp or email. I look forward to hearing from you!</p>
+
+    <div>
+      <%= link_to "https://wa.me/+33607248481", class: "c-btn mb-3", target: "_blank" do %>
+        <div class="c-btn__label">
+            contact me on whatsapp
+        </div>
+      <% end %>
+
+      <%= link_to "mailto:augiermelissa@gmail.com", class: "c-btn" do %>
+        <div class="c-btn__label">
+            send me an email
+        </div>
+      <% end %>
+    </div>
+
+    <div class='small text-black my-5'>
+        <p><strong>contact details</strong></p>
+        <p class='m-0'>
+            whatsapp :     <a href="https://wa.me/+33607248481" target="_blank">
+            +33607248481</a></p>
+        <p class='m-0'>
+            email: <a href="mailto: augiermelissa@gmail.com" target="_blank">augiermelissa@gmail.com</a></p>
+        <p class='m-0'>linkedin: <a href="https://www.linkedin.com/in/melissaaugier" target="_blank">linkedin.com/in/melissaaugier</a></p>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,48 @@
-<div class="modal fade project-modal" id="projectModal<%= index %>" tabindex="-1" aria-labelledby="projectModalLabel<%= index %>" aria-hidden="true" data-index="<%= index %>">
-    <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-        <div class="modal-body custom-modal-body" data-modal-scroll-target="modalBody">
-        <button type="button" class="btn-close close-modal" data-action="click->modal#closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
-        <h2><%= project.title %></h2>
-        <p>Details about <%= project.title %>...</p>
-        <div class="modal-scroll-content">
-            <p>Scroll down for more content...</p>
-            <!-- More content here -->
+
+<div class='d-flex justify-content-end mb-3'>
+    <%= link_to "https://monprojet.anah.gouv.fr/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+        <span class="c-btn__label">visit monprojet.anah.gouv.fr →</span>
+    <% end %>
+</div>
+<div class="row">
+    <%= image_tag 'anah-main-photo.png', alt: "anah main appearance", width: '100%' %>
+</div>
+<div class="row my-2 g-5">
+    <div class="col-6">
+        <%= image_tag 'anah-1.png', alt: "anah mobile view", width: '100%' %>
+        <div class="my-5 px-2">
+            <h3>Challenges & Solutions</h3>
+            <div>
+                <p><strong>Working with Legacy Code</strong> - Navigated and improved legacy code while ensuring existing functionality remained intact. Introduced automated tests and refactored incrementally to minimize risk.</p>
+                <p><strong>Setting Up New Front-End Tools (Hotwire)</strong> - Integrated Hotwire with an existing Rails application. Started small by implementing Turbo Frames and Stimulus controllers, gradually transitioning to a more dynamic front-end.</p>
+                <p><strong>Meeting Government Needs on Short Notice</strong> - Adapted quickly to meet urgent government requirements by collaborating closely with stakeholders and prioritizing critical features to ensure timely delivery.</p>
+            </div>
         </div>
+        <div class="my-5 px-2">
+            <h3>Responsibilities</h3>
+            <div>
+                <p><strong>Full-Stack Development</strong> - Served as both a front-end and back-end engineer, transitioning from a junior to an intermediate developer, and occasionally stepping in as a senior back-end developer to support the team.</p>
+            </div>
+        </div>
+        <div class='my-5'>
         </div>
     </div>
+    <div class="col-6">
+        <div class='mb-5'>
+            <h3>Overview</h3>
+            <p>
+                Monprojet.anah.gouv.fr is the official platform of the French Agence Nationale de l'Habitat (Anah). It helps homeowners, landlords, and condominium representatives apply for housing improvement assistance. The platform provides information on financial aid, eligibility, and guides users through the application process for renovation and housing projects.
+            </p>
+        </div>
+        <%= image_tag 'anah-2.png', alt: "anah shop tablet view", width: '100%' %>
+        <div class="p-3 d-flex align-items-center justify-content-between my-5">
+            <div class="vertical-line"></div>
+            <div class="pt-3">
+                <p>Visit the anah website to see the project live:</p>
+                <%= link_to "https://monprojet.anah.gouv.fr/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+                    <span class="c-btn__label">visit monprojet.anah.gouv.fr →</span>
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>

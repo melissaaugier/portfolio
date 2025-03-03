@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_02_27_140556) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_01_144419) do
   create_table "project_tools", force: :cascade do |t|
     t.integer "project_id", null: false
     t.integer "tool_id", null: false
@@ -25,6 +25,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_27_140556) do
     t.string "pseudo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
+    t.string "role"
+    t.string "date"
   end
 
   create_table "tools", force: :cascade do |t|
