@@ -7,7 +7,7 @@
     <%= image_tag 'vertiflor-main-photo.png', alt: "Vertiflor main appearance", width: '100%' %>
 </div>
 <div class="row my-2 g-5">
-    <div class="col-6">
+    <div class="col-12 col-lg-6">
         <%= image_tag 'vertiflor-2.png', alt: "Vertiflor mobile view", width: '100%' %>
         <div class="my-5 px-2">
             <h3>Challenges & Solutions</h3>
@@ -28,7 +28,7 @@
         <div class='my-5'>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 col-lg-6">
         <div class='mb-5'>
             <h3>Overview</h3>
             <p>
@@ -37,8 +37,10 @@
         </div>
         <%= image_tag 'vertiflor-3.png', alt: "Vertiflor shop tablet view", width: '100%' %>
         <div class="p-3 d-flex align-items-center justify-content-between my-5">
-            <div class="vertical-line"></div>
-            <div class="pt-3">
+            <div class="col-md-5 col-lg-4">
+                <div class="horizontal-line"></div>
+            </div>
+            <div class="col-md-7 col-lg-8 pt-3">
                 <p>Visit the Vertiflor website to see the project live:</p>
                 <%= link_to "https://vertiflor.co.id/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
                     <span class="c-btn__label">visit vertiflor.co.id →</span>

@@ -149,10 +149,10 @@ p {
     left: 100%;
   }
   
-  .vertical-line {
+  .horizontal-line {
     height: 1px;
-    width: 6rem; /* Adjust height as needed */
-    background-color: black; /* Adjust color as needed */
+    width: 90%; 
+    background-color: black; 
   }
 
 .small {
@@ -176,7 +176,7 @@ p {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     div#offcanvasRight, #contactOffcanvas {
         width: 100vw;
     }
@@ -185,4 +185,25 @@ p {
         display: none;
     }
     
+    .arrow {
+        display: none;
+    }
+    
+    nav.navbar.navbar-light.p-3.d-flex.justify-content-between {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .horizontal-line {
+        display: none;
+    }
 }
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .arrow {
+        display: none;
+    }
+
+  }
+  
