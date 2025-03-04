@@ -16,7 +16,7 @@ document.addEventListener('turbo:load', function () {
           // Scrolling up → Reduce height gradually
           offcanvas.style.height = '90vh'; // Adjust to a mid-point before resetting fully
           setTimeout(() => {
-            if (offcanvasBody.scrollTop === 0) {
+            if (offcanvasBody.scrollTop === 200) {
               offcanvas.style.height = '60vh'; // Reset height when fully scrolled up
               expanded = false; // Mark as not expanded
             }
