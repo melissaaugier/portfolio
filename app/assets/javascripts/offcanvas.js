@@ -1,15 +1,17 @@
 document.addEventListener('turbo:load', function () {
+  // Function to handle the offcanvas behavior for project-offcanvas
   function handleProjectOffcanvas(offcanvas) {
     const offcanvasBody = offcanvas.querySelector('.offcanvas-body');
     const closeButton = offcanvas.querySelector('.btn-close'); // Select close button
     let lastScrollTop = 200;
     let expanded = false;
 
+    // Scroll event listener for adjusting offcanvas height (only for project-offcanvas)
     if (offcanvasBody) {
       offcanvasBody.addEventListener('scroll', function () {
         const currentScrollTop = offcanvasBody.scrollTop;
 
-        if (currentScrollTop > lastScrollTop && !expanded) {
+        if (currentScrollTop > lastScrollTop) {
           // Scrolling down → Expand to full screen
           offcanvas.style.height = '100vh';
           expanded = true;
@@ -40,24 +42,27 @@ document.addEventListener('turbo:load', function () {
     }
   }
 
+  // Function to handle the offcanvas sliding effect
   function handleOffcanvasSlide(offcanvas, direction = 'Y') {
     const transformProperty = direction === 'X' ? 'translateX' : 'translateY';
 
     offcanvas.addEventListener('show.bs.offcanvas', function () {
-      this.style.transform = `${transformProperty}(0)`;
+      this.style.transform = `${transformProperty}(0)`; // Slide in
     });
 
     offcanvas.addEventListener('hide.bs.offcanvas', function () {
-      this.style.transform = `${transformProperty}(100%)`;
+      this.style.transform = `${transformProperty}(100%)`; // Slide out
     });
   }
 
+  // Apply custom height adjustment only to project-offcanvas
   document.querySelectorAll('.project-offcanvas').forEach(offcanvas => {
-    handleProjectOffcanvas(offcanvas);
-    handleOffcanvasSlide(offcanvas, 'Y');
+    handleProjectOffcanvas(offcanvas); // Apply height adjustments
+    handleOffcanvasSlide(offcanvas, 'Y'); // Apply vertical slide effect
   });
 
+  // Apply only the sliding effect to offcanvas-end (no height adjustment)
   document.querySelectorAll('.offcanvas.offcanvas-end').forEach(offcanvas => {
-    handleOffcanvasSlide(offcanvas, 'X');
+    handleOffcanvasSlide(offcanvas, 'X'); // Apply horizontal slide effect only
   });
 });
