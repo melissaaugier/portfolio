@@ -1,8 +1,9 @@
 document.addEventListener('turbo:load', function () {
   function handleProjectOffcanvas(offcanvas) {
     const offcanvasBody = offcanvas.querySelector('.offcanvas-body');
-    let lastScrollTop = 0;
-    let expanded = false; // Track if it is currently expanded
+    const closeButton = offcanvas.querySelector('.btn-close'); // Select close button
+    let lastScrollTop = 200;
+    let expanded = false;
 
     if (offcanvasBody) {
       offcanvasBody.addEventListener('scroll', function () {
@@ -11,20 +12,31 @@ document.addEventListener('turbo:load', function () {
         if (currentScrollTop > lastScrollTop && !expanded) {
           // Scrolling down → Expand to full screen
           offcanvas.style.height = '100vh';
-          expanded = true; // Mark as expanded
+          expanded = true;
         } else if (currentScrollTop < lastScrollTop && expanded) {
           // Scrolling up → Reduce height gradually
-          offcanvas.style.height = '90vh'; // Adjust to a mid-point before resetting fully
+          offcanvas.style.height = '80vh';
+
           setTimeout(() => {
-            if (offcanvasBody.scrollTop === 200) {
-              offcanvas.style.height = '60vh'; // Reset height when fully scrolled up
-              expanded = false; // Mark as not expanded
+            if (offcanvasBody.scrollTop <= 20) {
+              offcanvas.style.height = '60vh';
+              expanded = false;
             }
           }, 300);
         }
 
         lastScrollTop = currentScrollTop;
       });
+
+      // Ensure close button is always visible
+      new ResizeObserver(() => {
+        if (window.innerHeight < 700) { // If Safari UI hides top bar
+          closeButton.style.position = 'absolute';
+          closeButton.style.top = '10px';
+        } else {
+          closeButton.style.position = 'relative';
+        }
+      }).observe(document.body);
     }
   }
 
