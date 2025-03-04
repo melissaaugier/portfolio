@@ -2,9 +2,7 @@ document.addEventListener('turbo:load', function () {
   // Function to handle the offcanvas behavior for project-offcanvas
   function handleProjectOffcanvas(offcanvas) {
     const offcanvasBody = offcanvas.querySelector('.offcanvas-body');
-    const closeButton = offcanvas.querySelector('.btn-close'); // Select close button
-    let lastScrollTop = 400;
-    let expanded = false;
+    let lastScrollTop = 200;
 
     // Scroll event listener for adjusting offcanvas height (only for project-offcanvas)
     if (offcanvasBody) {
@@ -14,29 +12,13 @@ document.addEventListener('turbo:load', function () {
         if (currentScrollTop > lastScrollTop) {
           // Scrolling down → Expand to full screen
           offcanvas.style.height = '100vh';
-          expanded = true;
-        } else if (currentScrollTop < lastScrollTop && expanded) {
-          // Scrolling up → Reduce height gradually
-          offcanvas.style.height = '90vh';
-
-          if (offcanvasBody.scrollTop <= 400) {
-            offcanvas.style.height = '60vh';
-            expanded = false;
-          }
+        } else if (currentScrollTop === 0) {
+          // Reset height when scrolled back to top
+          offcanvas.style.height = '60vh';
         }
 
         lastScrollTop = currentScrollTop;
       });
-
-      // Ensure close button is always visible
-      new ResizeObserver(() => {
-        if (window.innerHeight < 700) { // If Safari UI hides top bar
-          closeButton.style.position = 'absolute';
-          closeButton.style.top = '10px';
-        } else {
-          closeButton.style.position = 'relative';
-        }
-      }).observe(document.body);
     }
   }
 
