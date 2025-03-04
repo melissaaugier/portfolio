@@ -1,6 +1,15 @@
 .offcanvas-header {
     justify-content: end;
     position: fixed;
+    right: 16px;
+    top: 16px;
+    background-color: #ffffff40;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+
+    .btn-close {
+        margin: 0;
+    }
 }
 
 .offcanvas-title {
