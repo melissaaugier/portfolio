@@ -1,3 +1,8 @@
+<div class='d-flex justify-content-end mb-3'>
+    <%= link_to "https://weatheraiapp-magr-5f58225834ab.herokuapp.com/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+        <span class="c-btn__label">visit weatheraiapp →</span>
+    <% end %>
+</div>
 <div class="container">
     <div class="row g-5 mb-5">
         <%= image_tag 'weatherai-main-photo.png', alt: "Weather AI main appearance", width: '100%' %>
@@ -5,6 +10,17 @@
     <div class="row g-5">
         <div class="col-12 col-lg-6">
             <%= image_tag 'weatherai-2.png', alt: 'weatherai tablet format', width: "100%" %>
+            <div class="p-3 d-flex align-items-center justify-content-between my-5">
+                <div class="col-md-5 col-lg-4">
+                    <div class="horizontal-line"></div>
+                </div>
+                <div class="col-md-7 col-lg-8 pt-3">
+                    <p>Visit the WeatherAI app to see the project live:</p>
+                    <%= link_to "https://weatheraiapp-magr-5f58225834ab.herokuapp.com/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
+                        <span class="c-btn__label">visit weatheraiapp →</span>
+                    <% end %>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-6">
             <div class='px-2'>
