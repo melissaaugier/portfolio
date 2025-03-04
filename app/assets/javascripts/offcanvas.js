@@ -3,7 +3,7 @@ document.addEventListener('turbo:load', function () {
   function handleProjectOffcanvas(offcanvas) {
     const offcanvasBody = offcanvas.querySelector('.offcanvas-body');
     const closeButton = offcanvas.querySelector('.btn-close'); // Select close button
-    let lastScrollTop = 200;
+    let lastScrollTop = 400;
     let expanded = false;
 
     // Scroll event listener for adjusting offcanvas height (only for project-offcanvas)
@@ -17,14 +17,12 @@ document.addEventListener('turbo:load', function () {
           expanded = true;
         } else if (currentScrollTop < lastScrollTop && expanded) {
           // Scrolling up → Reduce height gradually
-          offcanvas.style.height = '80vh';
+          offcanvas.style.height = '90vh';
 
-          setTimeout(() => {
-            if (offcanvasBody.scrollTop <= 20) {
-              offcanvas.style.height = '60vh';
-              expanded = false;
-            }
-          }, 300);
+          if (offcanvasBody.scrollTop <= 400) {
+            offcanvas.style.height = '60vh';
+            expanded = false;
+          }
         }
 
         lastScrollTop = currentScrollTop;
