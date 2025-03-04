@@ -12,7 +12,7 @@ document.addEventListener('turbo:load', function () {
         if (currentScrollTop > lastScrollTop) {
           // Scrolling down → Expand to full screen
           offcanvas.style.height = '100vh';
-        } else if (currentScrollTop === 20) {
+        } else if (currentScrollTop === 50) {
           // Reset height when scrolled back to top
           offcanvas.style.height = '60vh';
         }
