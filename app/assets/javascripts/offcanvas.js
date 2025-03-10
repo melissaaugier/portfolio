@@ -32,7 +32,10 @@ document.addEventListener('turbo:load', function () {
 
     offcanvas.addEventListener('hide.bs.offcanvas', function () {
       this.style.transform = `${transformProperty}(100%)`; // Slide out
+      document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
     });
+
+
   }
 
   // Apply custom height adjustment only to project-offcanvas
