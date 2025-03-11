@@ -86,6 +86,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+    brotli (0.6.0)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -178,6 +179,9 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.11)
+    rack-brotli (2.0.0)
+      brotli (>= 0.3)
+      rack (>= 3)
     rack-session (2.1.0)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -289,6 +293,7 @@ DEPENDENCIES
   jbuilder
   pg
   puma (>= 5.0)
+  rack-brotli
   rails (~> 7.1.5, >= 7.1.5.1)
   sassc-rails
   selenium-webdriver

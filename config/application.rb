@@ -17,6 +17,8 @@ module Portfolio
     config.autoload_lib(ignore: %w(assets tasks))
     config.force_ssl = true
     config.ssl_options = { hsts: { subdomains: true } }
+    config.middleware.use Rack::Deflater
+    config.middleware.use Rack::Brotli
 
     # Configuration for the application, engines, and railties goes here.
     #
