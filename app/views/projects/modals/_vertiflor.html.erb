@@ -1,49 +1,70 @@
 <div class='d-flex justify-content-end mb-3'>
-    <%= link_to "https://vertiflor.co.id/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
-        <span class="c-btn__label">visit vertiflor.co.id →</span>
+    <%= link_to "https://vertiflor.co.id/", 
+                target: "_blank", 
+                rel: "noopener noreferrer", 
+                class: 'c-btn align-right', 
+                aria: { label: "Visit Vertiflor website" } do %>
+        <span class="c-btn__label">Visit vertiflor.co.id →</span>
     <% end %>
 </div>
+
 <div class="row">
-    <%= image_tag 'vertiflor-main-photo.png', alt: "Vertiflor main appearance", width: '100%' %>
+    <%= image_tag 'vertiflor-main-photo.webp', 
+                  alt: "Vertiflor main appearance", 
+                  width: "1200", height: "675", 
+                  loading: "eager", 
+                  class: "img-fluid" %>
 </div>
+
 <div class="row my-2 g-5">
     <div class="col-12 col-lg-6">
-        <%= image_tag 'vertiflor-2.png', alt: "Vertiflor mobile view", width: '100%' %>
+        <%= image_tag 'vertiflor-2.webp', 
+                      alt: "Vertiflor mobile view", 
+                      width: "600", height: "800", 
+                      loading: "lazy", 
+                      class: "img-fluid" %>
+
         <div class="my-5 px-2">
             <h3>Challenges & Solutions</h3>
-            <div>
-                <p><strong>Client Requirement for WordPress</strong> - Worked within platform limitations while ensuring a custom, high-end look.</p>
-                <p><strong>Balancing Design & Performance</strong> - Maintained a visually rich experience without compromising speed.</p>
-            </div>
+            <ul>
+                <li><strong>Client Requirement for WordPress</strong> – Worked within platform limitations while ensuring a custom, high-end look.</li>
+                <li><strong>Balancing Design & Performance</strong> – Maintained a visually rich experience without compromising speed.</li>
+            </ul>
         </div>
+
         <div class="my-5 px-2">
-            <h3>Responsabilities</h3>
-            <p>
-                <strong>UX Design</strong> - Developed a magazine editorial-style layout to enhance the brand’s premium aesthetic.
-            </p>
-            <p>
-                <strong>Development</strong> - Built the website using WordPress, while mentoring a junior developer throughout the process.
-            </p>
-        </div>
-        <div class='my-5'>
+            <h3>Responsibilities</h3>
+            <p><strong>UX Design</strong> – Developed a magazine editorial-style layout to enhance the brand’s premium aesthetic.</p>
+            <p><strong>Development</strong> – Built the website using WordPress while mentoring a junior developer throughout the process.</p>
         </div>
     </div>
+
     <div class="col-12 col-lg-6">
-        <div class='mb-5'>
+        <div class='mb-5 px-2'>
             <h3>Overview</h3>
             <p>
                 Vertiflor is a luxury vinyl flooring brand. The project involved designing and developing a website that effectively showcases the brand’s products, values, and services while ensuring a smooth user experience.
             </p>
         </div>
-        <%= image_tag 'vertiflor-3.png', alt: "Vertiflor shop tablet view", width: '100%' %>
-        <div class="p-3 d-flex align-items-center justify-content-between my-5">
+
+        <%= image_tag 'vertiflor-3.webp', 
+                      alt: "Vertiflor shop tablet view", 
+                      width: "800", height: "600", 
+                      loading: "lazy", 
+                      class: "img-fluid" %>
+
+        <div class="p-3 row d-flex justify-content-start align-items-center my-5">
             <div class="col-md-5 col-lg-4">
                 <div class="horizontal-line"></div>
             </div>
             <div class="col-md-7 col-lg-8 pt-3">
                 <p>Visit the Vertiflor website to see the project live:</p>
-                <%= link_to "https://vertiflor.co.id/", target: "_blank", rel: "noopener noreferrer", class: 'c-btn align-right' do %>
-                    <span class="c-btn__label">visit vertiflor.co.id →</span>
+                <%= link_to "https://vertiflor.co.id/", 
+                            target: "_blank", 
+                            rel: "noopener noreferrer", 
+                            class: 'c-btn align-right', 
+                            aria: { label: "Visit Vertiflor website" } do %>
+                    <span class="c-btn__label">Visit vertiflor.co.id →</span>
                 <% end %>
             </div>
         </div>

@@ -9,15 +9,17 @@ document.addEventListener('turbo:load', function () {
       offcanvasBody.addEventListener('scroll', function () {
         const currentScrollTop = offcanvasBody.scrollTop;
 
-        if (currentScrollTop > lastScrollTop) {
-          // Scrolling down → Expand to full screen
-          offcanvas.style.height = '100vh';
-        } else if (currentScrollTop === 0) {
-          // Reset height when scrolled back to top
-          offcanvas.style.height = '60vh';
+        // Only adjust the height if the scroll position changes significantly
+        if (Math.abs(currentScrollTop - lastScrollTop) > 10) {
+          if (currentScrollTop > lastScrollTop) {
+            // Scrolling down → Expand to full screen
+            offcanvas.style.height = '100vh';
+          } else if (currentScrollTop === 0) {
+            // Reset height when scrolled back to top
+            offcanvas.style.height = '60vh';
+          }
+          lastScrollTop = currentScrollTop;
         }
-
-        lastScrollTop = currentScrollTop;
       });
     }
   }
@@ -34,8 +36,6 @@ document.addEventListener('turbo:load', function () {
       this.style.transform = `${transformProperty}(100%)`; // Slide out
       document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
     });
-
-
   }
 
   // Apply custom height adjustment only to project-offcanvas
