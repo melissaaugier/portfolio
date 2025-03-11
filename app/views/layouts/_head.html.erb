@@ -1,4 +1,8 @@
 <head>
+  <% Dir[Rails.root.join('app', 'assets', 'images', '*.webp')].each do |image_path| %>
+    <link rel="preload" href="<%= image_url(File.basename(image_path)) %>" as="image">
+  <% end %>
+  
   <%= render "projects/partials/google_analytics" %>
 
   <title>Melissa Agr - Développeuse Ruby on Rails & JavaScript</title>
